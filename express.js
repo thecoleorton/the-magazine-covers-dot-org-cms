@@ -4,7 +4,7 @@ var express = require('express')
 var app = express()
 app.use(express.bodyParser())
 
-var db = mongoskin.db('localhost:27017/test', {safe:true});
+var db = mongoskin.db('localhost:27017/the-magazine-covers-cms', {safe:true});
 
 app.param('collectionName', function(req, res, next, collectionName){
   req.collection = db.collection(collectionName)
